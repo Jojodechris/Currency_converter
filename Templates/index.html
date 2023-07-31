@@ -1,0 +1,44 @@
+<!-- index.html file -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Form with Three Inputs</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <h2>Currency converter:</h2>
+    <form action="/result">
+      <!-- Input field 1: Text -->
+      <label for="name">Converting from:</label>
+      <input type="text" id="name" name="Convertfrom" value="" />
+      <br />
+      <br />
+
+      <!-- Input field 2: Text -->
+      <label for="email">Converting to:</label>
+      <input type="text" id="email" name="Convertto" value="" />
+      <br />
+      <br />
+
+      <!-- Input field 3: Number -->
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="Convertamount" value="" />
+      <br />
+      <br />
+
+      <!-- Submit button -->
+      <button type="submit">Convert Currency!</button>
+    </form>
+    <main id="content">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <section class="messages">
+        {% for category,msg in messages %}
+        <p class="{{category}}">{{msg}}</p>
+        {% endfor %}
+      </section>
+      {% endif %} {% endwith%}
+    </main>
+  </body>
+</html>
