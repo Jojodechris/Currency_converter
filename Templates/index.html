@@ -1,5 +1,3 @@
-<!-- index.html file -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,22 +6,22 @@
   </head>
   <body>
     <h2>Currency converter:</h2>
-    <form action="/result">
+    <form action="/result" method="post">
       <!-- Input field 1: Text -->
       <label for="name">Converting from:</label>
-      <input type="text" id="name" name="Convertfrom" value="" />
+      <input type="text" id="name" name="Convertfrom" value= "{{from_currency}}">
       <br />
       <br />
 
       <!-- Input field 2: Text -->
       <label for="email">Converting to:</label>
-      <input type="text" id="email" name="Convertto" value="" />
+      <input type="text" id="email" name="Convertto" value="{{to_currency}}" />
       <br />
       <br />
 
       <!-- Input field 3: Number -->
       <label for="amount">Amount:</label>
-      <input type="number" id="amount" name="Convertamount" value="" />
+      <input type="number" id="amount" name="Convertamount" value="{{amount}}" />
       <br />
       <br />
 
